@@ -6,7 +6,7 @@
 
    Description: Busqueda y concordancia de la Biblia Reina Valera 1909 y 1960.
 
-   Version: 1.0.1
+   Version: 1.0.2
 
    Author: Bendicion.net - Arlo B. Calles
 
@@ -48,7 +48,7 @@
 
 global $bendicion_biblia_db_version;
 
-$bendicion_biblia_db_version = "1.0";
+$bendicion_biblia_db_version = "1.0.2";
 
 
 
@@ -102,7 +102,7 @@ function bendicion_biblia_install()
 
     // Import data file
 
-	require_once(ABSPATH . 'wp-content/plugins/bendicion_biblia_database.php');
+	require_once(ABSPATH . 'wp-content/plugins/biblia-y-concordancia/bendicion_biblia_database.php');
 
 	
 
