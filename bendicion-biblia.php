@@ -4,9 +4,9 @@
 
    Plugin URI:  http://bendicion.net/biblia-para-wordpress/
 
-   Description: Busqueda y concordancia de la Biblia RV 1960 © American Bible Society.
+   Description: Busqueda y concordancia de la Biblia Reina Valera 1909 y 1960.
 
-   Version: 1.0
+   Version: 1.0.1
 
    Author: Bendicion.net - Arlo B. Calles
 
@@ -102,7 +102,7 @@ function bendicion_biblia_install()
 
     // Import data file
 
-	require_once(ABSPATH . 'wp-content/plugins/Bendicion-Biblia/bendicion_biblia_database.php');
+	require_once(ABSPATH . 'wp-content/plugins/bendicion_biblia_database.php');
 
 	
 
