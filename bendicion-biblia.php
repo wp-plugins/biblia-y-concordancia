@@ -14,7 +14,7 @@
 
 
 
-   Version: 2.6
+   Version: 2.8
 
 
 
@@ -98,7 +98,7 @@ global $bendicion_biblia_db_version;
 
 
 
-$bendicion_biblia_db_version = "2.7";
+$bendicion_biblia_db_version = "2.8";
 
 
 
