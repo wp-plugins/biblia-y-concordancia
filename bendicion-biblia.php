@@ -2,7 +2,7 @@
    Plugin Name: Biblia y Concordancia
    Plugin URI:  http://bendicion.net/biblia-para-wordpress/
    Description: Busqueda y concordancia de la Biblia Reina Valera 1909 y 1960.
-   Version: 2.0
+   Version: 2.5
    Author: Bendicion.net - Arlo B. Calles
    Author URI: http://bendicion.net
    License: GPL2
@@ -22,7 +22,7 @@
    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
    */
 global $bendicion_biblia_db_version;
-$bendicion_biblia_db_version = "2.0";
+$bendicion_biblia_db_version = "2.5";
 
 ### Create widget
 function widget_bendicion_biblia() {

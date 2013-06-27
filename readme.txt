@@ -3,7 +3,7 @@ Contributors: bendicion.net
 Donate link: http://bendicion.net/
 Tags: biblia, bible
 Requires at least: 3.0.1
-Stable tag: 2.0
+Stable tag: 2.5
 Tested up to: 3.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -43,7 +43,7 @@ al usuario buscar en la Biblia por medio de libro, capitulo, versiculo y tambien
 = 1.0.2 =
 * Se quito un directorio que no estaba presente y daba el error: failed to open stream: No such file or directory.
 
-= 2.0 =
+= 2.5 =
 * Agregamos la version Reina Valera 1909 (dominio publico) en la opcion de busqueda por palabras.
 
 == Upgrade Notice == 
