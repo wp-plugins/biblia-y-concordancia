@@ -10,11 +10,11 @@
 
 
 
-   Description: Busqueda y concordancia de la Biblia Reina Valera 1909.
+   Description: Busqueda y concordancia de la Biblia Reina Valera 1909 con audio.
 
 
 
-   Version: 3.0
+   Version: 3.5
 
 
 
@@ -98,7 +98,7 @@ global $bendicion_biblia_db_version;
 
 
 
-$bendicion_biblia_db_version = "3.0";
+$bendicion_biblia_db_version = "3.5";
 
 
 
@@ -732,9 +732,18 @@ foreach($bible_result2 as $bible_book) {
 
 
 
-echo $bible_text.'&nbsp;'.$bible_book.'&nbsp;'.$capitulo.':'.$versiculo.'</br></br>Citas b&iacute;blicas tomadas de la <b>Reina-Valera 1909 (Dominio P&uacute;blico)</b>.';
+echo '</br>'.$bible_text.'&nbsp;<b>'.$bible_book.'&nbsp;'.$capitulo.':'.$versiculo.'</b></br></br>';
 
+// Audio player
+    echo 'Escuchar todo el cap&iacute;tulo '.$capitulo.' del libro '.$bible_book.'&nbsp;&nbsp;';
+	wp_enqueue_script('load_jquery', ABSPATH . '/wp-content/plugins/biblia-y-concordancia/build/jquery.js');
+	wp_enqueue_script('load_mediaelement', ABSPATH . '/wp-content/plugins/biblia-y-concordancia/build/mediaelement-and-player.min.js');
+	echo '<link rel="stylesheet" href="'.ABSPATH.'/wp-content/plugins/biblia-y-concordancia/build/mediaelementplayer.min.css" type="text/css" />';
+	echo '<audio id="player2" src="http://bendicion.net/biblia_audio/'.$libro.'/'.$libro.'_'.$capitulo.'.mp3" type="audio/mp3" controls="controls"></audio>';
+    wp_enqueue_script('load_audio', ABSPATH . '/wp-content/plugins/biblia-y-concordancia/audio.js');
 
+echo '</br></br>Citas b&iacute;blicas tomadas de la <b>Reina-Valera 1909 (Dominio P&uacute;blico)</b>.';
+echo '</br>Audio proporcionado por wordproject.org &reg; Word Project';
 
 }
 

@@ -1,9 +1,9 @@
 === Biblia y Concordancia ===
 Contributors: bendicion.net
 Donate link: http://bendicion.net/
-Tags: biblia, bible
-Requires at least: 3.5.1
-Stable tag: 3.0
+Tags: biblia, bible, concordancia, reina valera 1909
+Requires at least: 2.8
+Stable tag: 3.5
 Tested up to: 3.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -41,6 +41,9 @@ al usuario buscar en la Biblia por medio de libro, capitulo, versiculo y tambien
 
 = 3.0 =
 * Usando la version Reina Valera 1909 (dominio publico)
+
+= 3.5 =
+* Se agrego la biblia con audio 1909
 
 == Upgrade Notice == 
 
