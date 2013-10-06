@@ -1,19 +1,19 @@
 === Biblia y Concordancia ===
 Contributors: bendicion.net
 Donate link: http://bendicion.net/
-Tags: biblia, bible, concordancia, reina valera 1909
-Requires at least: 2.8
-Stable tag: 3.5
-Tested up to: 3.5.2
+Tags: biblia, bible
+Requires at least: 3.0.1
+Stable tag: 3.5.1
+Tested up to: 3.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Este plugin instala la Biblia Reina Valera 1909 y permite buscar en la Biblia por libro, capitulo, versiculo y palabras.
+Este plugin instala la Biblia Reina Valera 1909 y 1960, y permite buscar en la Biblia por libro, capitulo, versiculo y palabras.
 
 == Description ==
 
-En Bendicion.net desarrollamos este plugin de WordPress que instala la Biblia en espanol version Reina Valera 1909 (dominio publico) y permite
-al usuario buscar en la Biblia por medio de libro, capitulo, versiculo y tambien por palabras como una concordancia.
+En Bendicion.net desarrollamos este plugin de WordPress que instala la Biblia en espanol version Reina Valera 1909 (dominio publico) y la version Reina Valera 1960 (Copyright by the American Bible Society), y permite
+al usuario buscar en la Biblia por medio de libro, capitulo, versiculo y tambien por palabras como una concordancia. Tambien visita Bendicion.mobi
 
 == Installation ==
 
@@ -37,13 +37,16 @@ al usuario buscar en la Biblia por medio de libro, capitulo, versiculo y tambien
 = Cambios y actualizaciones del plugin =
 
 = 1.0 =
-* Cambios
+* Busqueda por palabra, verso y capitulo.
 
-= 3.0 =
-* Usando la version Reina Valera 1909 (dominio publico)
+= 1.0.2 =
+* Se quito un directorio que no estaba presente y daba el error: failed to open stream: No such file or directory.
 
-= 3.5 =
-* Se agrego la biblia con audio 1909
+= 2.5 =
+* Agregamos la version Reina Valera 1909 (dominio publico) en la opcion de busqueda por palabras.
+
+= 3.5.1=
+* Arreglamos el codigo para ser compatible con la version 3.6.1 de WordPress.
 
 == Upgrade Notice == 
 
