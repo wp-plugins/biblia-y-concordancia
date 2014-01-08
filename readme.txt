@@ -8,11 +8,11 @@ Tested up to: 3.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Este plugin instala la Biblia Reina Valera 1909 y 1960, y permite buscar en la Biblia por libro, capitulo, versiculo y palabras.
+Este plugin instala la Biblia Reina Valera 1909 y permite buscar en la Biblia por libro, capitulo, versiculo y palabras.
 
 == Description ==
 
-En Bendicion.net desarrollamos este plugin de WordPress que instala la Biblia en espanol version Reina Valera 1909 (dominio publico) y la version Reina Valera 1960 (Copyright by the American Bible Society), y permite
+En Bendicion.net desarrollamos este plugin de WordPress que instala la Biblia en espanol version Reina Valera 1909 (dominio publico), y permite
 al usuario buscar en la Biblia por medio de libro, capitulo, versiculo y tambien por palabras como una concordancia. Tambien visita Bendicion.mobi
 
 == Installation ==
@@ -45,10 +45,10 @@ al usuario buscar en la Biblia por medio de libro, capitulo, versiculo y tambien
 = 2.5 =
 * Agregamos la version Reina Valera 1909 (dominio publico) en la opcion de busqueda por palabras.
 
-= 3.5.1=
+= 3.5.1 =
 * Arreglamos el codigo para ser compatible con la version 3.6.1 de WordPress.
 
-= 3.6=
+= 3.6 =
 * Ahora se pueden buscar capitulos completos y aparece la opcion para ver el capitulo siguiente y el capitulo anterior.
 
 == Upgrade Notice == 
