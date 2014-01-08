@@ -3,8 +3,8 @@ Contributors: bendicion.net
 Donate link: http://bendicion.net/
 Tags: biblia, bible
 Requires at least: 3.0.1
-Stable tag: 3.5.1
-Tested up to: 3.6.1
+Stable tag: 3.6
+Tested up to: 3.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,10 +48,11 @@ al usuario buscar en la Biblia por medio de libro, capitulo, versiculo y tambien
 = 3.5.1=
 * Arreglamos el codigo para ser compatible con la version 3.6.1 de WordPress.
 
-== Upgrade Notice == 
+= 3.6=
+* Ahora se pueden buscar capitulos completos y aparece la opcion para ver el capitulo siguiente y el capitulo anterior.
 
+== Upgrade Notice == 
 No changes yet
 
 == Screenshots ==
-
 No screenshots yet
