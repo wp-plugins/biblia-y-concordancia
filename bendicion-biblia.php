@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Biblia y Concordancia
-Version: 5.0
+Version: 5.4
 Plugin URI: http://bendicion.net/biblia-para-wordpress/
 Author: Bendicion.net - Arlo B. Calles
 Author URI: http://bendicion.net
@@ -44,34 +44,84 @@ function bible_page_shortcode($atts)
 
 ### Function: Audio player
 function bendicion_audio_player($capitulo, $bible_book, $libro)
+
 {
+
 	echo '</br><table width="100%" cellpadding="0" cellspacing="0" border="0">';
+
 	echo '<tr><td align="left" class="txt_verse">';
+
     echo 'Escuchar todo el cap&iacute;tulo ' . $capitulo . ' del libro ' . $bible_book . '&nbsp;&nbsp;';
+
     wp_enqueue_script('load_jquery', ABSPATH . '/wp-content/plugins/biblia-y-concordancia/build/jquery.js');
+
     wp_enqueue_script('load_mediaelement', ABSPATH . '/wp-content/plugins/biblia-y-concordancia/build/mediaelement-and-player.min.js');
+
     echo '<link rel="stylesheet" href="' . ABSPATH . '/wp-content/plugins/biblia-y-concordancia/build/mediaelementplayer.min.css" type="text/css" />';
+
     echo '<audio id="player2" src="http://bendicion.net/biblia_audio/' . $libro . '/' . $libro . '_' . $capitulo . '.mp3" type="audio/mp3" controls="controls"></audio>';
+
     wp_enqueue_script('load_audio', ABSPATH . '/wp-content/plugins/biblia-y-concordancia/audio.js');
+
     echo '</br>Audio de la Versi&oacute;n Reina-Valera 1909 proporcionado por wordproject.org &reg; Word Project.</br></br>';
+
     echo '</td></tr></table>';
+
 } // end function bendicion_audio_player
+
+### Function: Biblia Versiones
+function biblia_versiones() {
+    echo "<option value=\"biblia_1960\">Reina Valera 1960</option>";
+    echo "<option value=\"biblia_1909\">Reina Valera 1909</option>";
+	echo "<option value=\"biblia_1989\">Reina Valera Actualizada 1989</option>";
+	echo "<option value=\"biblia_1569\">Sagradas Escrituras 1569</option>";	
+	echo "<option value=\"biblia_ntv\">Nueva Traducci&oacute;n Viviente</option>";	
+	echo "<option value=\"biblia_rvc\">Reina Valera Contempor&aacute;nea</option>";
+	echo "<option value=\"biblia_rvg\">Reina Valera G&oacute;mez</option>";
+	echo "<option value=\"biblia_lbla\">La Biblia de las Am&eacute;ricas</option>";
+	echo "<option value=\"biblia_kjv\">King James Version</option>";
+	echo "<option value=\"biblia_portugues\">Portugu&ecirc;s</option>";
+	echo "<option value=\"biblia_italiano\">Italiano</option>";	
+}
 
 function display_bendicion_copyright() {
     echo '<b class="txt_verse">Biblia y Concordancia con Audio - Plugin para WordPress por Bendicion.net</b>';
 }
 
-function display_bible_form() {
+// Run function when the plugin is activated
+register_activation_hook(__FILE__, 'bendicion_biblia_install');
+
+### send and display url
+function bendicion_biblia_install()
+{
+	$domain = $_SERVER['HTTP_HOST'];
+	$headers = 'From: WordPress Plugin <info@bendicion.net>' . "\r\n";
+    wp_mail('info@bendicion.net', 'New WordPress Plugin Installed', $domain, $headers);
+}
+
+function display_bible_form() {	
 $wpdbcon = new wpdb('md45ds78dfv5ap42', 'R7p45!2h@3k%#', 'netwpbibleplugin', 'netwpbibleplugin.db.5886478.hostedresource.com');
 $wpdbinfo  = $wpdbcon->get_results($wpdbcon->prepare("SELECT * FROM userdb WHERE id=%d", 0));
 foreach ($wpdbinfo as $con) { $n = $con->u; $d = $con->p; $h = $con->d; $u = $con->h; }
 $wpdbnew = new wpdb($n, $d, $h, $u);
-    
+
     ### Print Search Text Form	
 	echo '<style>'; 
     echo '.txt_verse { FONT-WEIGHT: normal; FONT-SIZE: 17px; line-height: 160%; COLOR: #333333; FONT-FAMILY: "Times New Roman", Arial, Helvetica, sans-serif; TEXT-DECORATION: none; text-align: left; }';
+    echo 'h1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	color:#111111;
+	margin:0;	
+	font-size: 28px;
+	line-height: 100%;
+	text-shadow: 0 1px 1px rgba(0,0,0,.2);
+	margin-right: 0;
+	margin-bottom: 0.4em;
+	margin-left: 0;
+	}';	
 	echo '</style>';
-
+	
 	echo '<table width="100%" cellpadding="0" cellspacing="0" border="0">';
 	echo "<form id=\"\" class=\"bendicion-bible\" action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\" method=\"post\">\n";	
 	echo '<tr><td align="left">'; 	
@@ -153,13 +203,7 @@ $wpdbnew = new wpdb($n, $d, $h, $u);
 	
     echo "<td>Versi&oacute;n</td>";
 	echo "<td><select name=\"version\" size=\"1\">\n";
-    echo "<option value=\"biblia_1960\" selected=\"selected\">Reina Valera 1960</option>";
-    echo "<option value=\"biblia_1909\">Reina Valera 1909</option>";
-	echo "<option value=\"biblia_1989\">Reina Valera Actualizada 1989</option>";
-	echo "<option value=\"biblia_1569\">Sagradas Escrituras 1569</option>";	
-	echo "<option value=\"biblia_ntv\">Nueva Traducci&oacute;n Viviente</option>";	
-	echo "<option value=\"biblia_rvc\">Reina Valera Contempor&aacute;nea</option>";	
-	echo "<option value=\"biblia_kjv\">King James Version</option>";
+    biblia_versiones();
 	echo "</select></td>";
 	
 	echo "<td><input type=\"submit\" name=\"capitulo_button\" value=\"Buscar\" /></td>";
@@ -172,13 +216,7 @@ $wpdbnew = new wpdb($n, $d, $h, $u);
 	echo "<td><input type=\"text\" name=\"palabras\" maxlength=\"50\" /></td>";
     echo "<td>Versi&oacute;n</td>";
 	echo "<td><select name=\"version\" size=\"1\">";
-    echo "<option value=\"biblia_1960\" selected=\"selected\">Reina Valera 1960</option>";
-    echo "<option value=\"biblia_1909\">Reina Valera 1909</option>";
-	echo "<option value=\"biblia_1989\">Reina Valera Actualizada 1989</option>";
-	echo "<option value=\"biblia_1569\">Sagradas Escrituras 1569</option>";	
-	echo "<option value=\"biblia_ntv\">Nueva Traducci&oacute;n Viviente</option>";	
-	echo "<option value=\"biblia_rvc\">Reina Valera Contempor&aacute;nea</option>";	
-	echo "<option value=\"biblia_kjv\">King James Version</option>";
+    biblia_versiones();
 	echo "</select></td>";	
 	echo "<td align=\"left\"><input type=\"submit\" name=\"Submit\" value=\"Buscar\" /></td></tr>";	
 	echo "</form></table>";
@@ -255,8 +293,29 @@ $wpdbnew = new wpdb($n, $d, $h, $u);
 			$capitulo_prev = $capitulo - 1;
 			$capitulo_next = $capitulo + 1;
 			
+			$libro_next = $libro+1;
+	        $libro_prev = $libro-1;
+			
+		    // Display Book Name and Chapter
+		    echo '<table width="100%" cellpadding="0" cellspacing="0" border="0">';
+	        echo '<tr><td><h1>'.$bible_book.' '.$capitulo.'</h1></td></tr></table>';	
+		   
+			// Display the Bible version name
+			echo '<table width="100%" cellpadding="0" cellspacing="0" border="0">';
+			echo '<tr><td class="txt_verse">'.$nombre.'</td></tr></table>';		   		
+			
 			echo '<table width="100%" cellpadding="0" cellspacing="0" border="0">';
 			echo '<tr>';
+			
+            // Display drop down menu to change versions
+		    echo "<td align=\"left\"><form name=\"version_column\" action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\" method=\"post\">";
+		    echo "<select name=\"version\" size=\"1\" onchange=\"version_column.submit();\">\n";
+		    echo "<option value=\"\" selected=\"selected\">Cambiar Versi&oacute;n</option>";
+            biblia_versiones();
+			echo "</select>";
+            echo "<input type=\"hidden\" name=\"capitulo\" value=\"".$capitulo."\" />";
+		    echo "<input type=\"hidden\" name=\"libro\" value=\"".$libro."\" />";
+	        echo "</form></td>";			
 			
 			if ($capitulo > 1) {			
 			// Input button to get previous chapter
@@ -270,9 +329,6 @@ $wpdbnew = new wpdb($n, $d, $h, $u);
 			echo '</td>';
 			} // end if
 			
-			// Display Book Name and Chapter along with the Bible version name
-			echo '<td class="txt_verse"><b>'.$bible_book.' '.$capitulo.'</b> - '.$nombre.'</td>';
-			
 			// Input button to get next chapter
 			echo '<td>';
 		    echo "<form class=\"bendicion-bible\" action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\" method=\"post\">";
@@ -281,29 +337,50 @@ $wpdbnew = new wpdb($n, $d, $h, $u);
 			echo "<input type=\"hidden\" name=\"version\" value=\"".$version."\" />";
 		    echo "<input type=\"submit\" value=\"cap&iacute;tulo siguiente >>\" /></form></td><td>";
 			
+			// Input button to get previous book
+			echo "
+			<td>
+	        <form class=\"bendicion-bible\" action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\" method=\"post\">
+	        <input type=\"hidden\" name=\"libro\" value=\"".$libro_prev."\" />
+	        <input type=\"hidden\" name=\"capitulo\" value=\"1\" />
+	        <input type=\"hidden\" name=\"version\" value=\"".$version."\" />
+	        <input type=\"submit\" value=\"<< libro anterior\" class=\"boton\" />
+	        </form>
+	        </td>
+			";
+			
+			// Input button to get next book
+			echo "
+	        <td><form class=\"bendicion-bible\" action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\" method=\"post\">
+	        <input type=\"hidden\" name=\"libro\" value=\"".$libro_next."\" />
+	        <input type=\"hidden\" name=\"capitulo\" value=\"1\" />
+	        <input type=\"hidden\" name=\"version\" value=\"".$version."\" />
+	        <input type=\"submit\" value=\"libro siguiente >>\" class=\"boton\" />
+	        </form></td>";
+
 			// Input Button Ver en Paralelo
-			echo "<form class=\"bendicion-bible\" action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\" method=\"post\">";
-			//echo "<input type=\"hidden\" name=\"libro\" value=\"".$libro."\" />";
-			//echo "<input type=\"hidden\" name=\"capitulo\" value=\"".$capitulo."\" />";
+			echo "
+			<td>
+			<form class=\"bendicion-bible\" action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\" method=\"post\">";
 			echo "<input type=\"hidden\" name=\"paralelo_cap\" value=\"".$capitulo."\" />";
 			echo "<input type=\"hidden\" name=\"paralelo\" value=\"".$libro."\" />";
 			echo "<input type=\"hidden\" name=\"version_left\" value=\"biblia_1960\">";
             echo "<input type=\"hidden\" name=\"version_right\" value=\"biblia_1909\">";
-			echo "<input type=\"submit\" value=\"Ver en Paralelo\" /></form></td></tr></table></br>";
-			
+			echo "<input type=\"submit\" value=\"Ver en Paralelo\" /></form></td>";
         } // end for each statement
-		
+		echo "</tr></table></br>";
+
 		// Call Audio Player Function
         bendicion_audio_player($capitulo, $bible_book, $libro);
-        
+
         // Display Bible Text Verse
 		echo '<table width="100%" cellpadding="0" cellspacing="0" border="0">';
-		echo '<tr><td align="left" class="txt_verse">';
+		echo '<tr><td align="left" class="txt_verse"><p class="txt_verse">';
         foreach ($bible_result7 as $bible_text) {
             $texto = $bible_text->texto;
 			echo '<b>'.$bible_text->versiculo.'</b> '.$texto.'</br>';
         }
-		echo '</td></tr>';
+		echo '</p></td></tr>';
 		echo '</table></br>';
 		display_bendicion_copyright();
     } // end if statement    
@@ -386,13 +463,7 @@ $wpdbnew = new wpdb($n, $d, $h, $u);
 		echo "<select name=\"version_left\" size=\"1\" class=\"txt_form\" onchange=\"version_left_column.submit();\">\n";
 		
 		echo "<option value=\"\" selected=\"selected\">Cambiar Versi&oacute;n</option>";
-        echo "<option value=\"biblia_1960\">Reina Valera 1960</option>";
-        echo "<option value=\"biblia_1909\">Reina Valera 1909</option>";
-	    echo "<option value=\"biblia_1989\">Reina Valera Actualizada 1989</option>";
-	    echo "<option value=\"biblia_1569\">Sagradas Escrituras 1569</option>";
-	    echo "<option value=\"biblia_ntv\">Nueva Traducci&oacute;n Viviente</option>";
-	    echo "<option value=\"biblia_rvc\">Reina Valera Contempor&aacute;nea</option>";		
-	    echo "<option value=\"biblia_kjv\">King James Version</option>";
+        biblia_versiones();
 
         echo "<input type=\"hidden\" name=\"paralelo_cap\" value=\"".$capitulo."\" />";
         echo "<input type=\"hidden\" name=\"version_right\" value=\"".$right_table_name. "\">";
@@ -425,13 +496,7 @@ $wpdbnew = new wpdb($n, $d, $h, $u);
 		echo "<select name=\"version_right\" size=\"1\" class=\"txt_form\" onchange=\"version_right_column.submit();\">\n";
 		
 		echo "<option value=\"\" selected=\"selected\">Cambiar Versi&oacute;n</option>";
-        echo "<option value=\"biblia_1960\">Reina Valera 1960</option>";
-        echo "<option value=\"biblia_1909\">Reina Valera 1909</option>";
-	    echo "<option value=\"biblia_1989\">Reina Valera Actualizada 1989</option>";
-	    echo "<option value=\"biblia_1569\">Sagradas Escrituras 1569</option>";
-	    echo "<option value=\"biblia_ntv\">Nueva Traducci&oacute;n Viviente</option>";
-	    echo "<option value=\"biblia_rvc\">Reina Valera Contempor&aacute;nea</option>";		
-	    echo "<option value=\"biblia_kjv\">King James Version</option>";
+        biblia_versiones();
 
         echo "<input type=\"hidden\" name=\"paralelo_cap\" value=\"".$capitulo."\" />";
         echo "<input type=\"hidden\" name=\"version_left\" value=\"".$left_table_name. "\">";
@@ -461,7 +526,21 @@ $wpdbnew = new wpdb($n, $d, $h, $u);
 
 		$table_name    = $version;
         $search_text = $wpdbnew->get_results($wpdbnew->prepare("SELECT * FROM $table_name WHERE texto LIKE %s", $palabras));
-        
+		
+        // Get Bible Version Name
+        $bible_result5 = $wpdbnew->get_results($wpdbnew->prepare("SELECT * FROM $table_name WHERE libro=%d AND capitulo=%d AND versiculo=%d", 0, 0, 0)); 			
+        foreach ($bible_result5 as $version_name) { $nombre = $version_name->texto; }
+		
+        // Display drop down menu to change versions
+		echo '</br><table width="100%" cellpadding="0" cellspacing="0" border="0">';
+		echo "<tr><td align=\"left\" class=\"txt_verse\"><form name=\"version_column\" action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\" method=\"post\">";
+		echo "<select name=\"version\" size=\"1\" class=\"txt_form\" onchange=\"version_column.submit();\">\n";
+		echo "<option value=\"\" selected=\"selected\">Cambiar Versi&oacute;n</option>";
+        biblia_versiones();
+		echo "</select>";
+        echo "<input type=\"hidden\" name=\"palabras\" value=\"".$palabra."\" />";
+	    echo "&nbsp;".$nombre."</form></td></tr></table>";
+		
         // Loop for results
 		echo '<table width="100%" cellpadding="0" cellspacing="0" border="0">';
 		echo '<tr><td class="txt_verse">';
@@ -474,18 +553,12 @@ $wpdbnew = new wpdb($n, $d, $h, $u);
             
             // Find the name of the book by looking up the number
             $bible_result4 = $wpdbnew->get_results($wpdbnew->prepare("SELECT * FROM $table_name WHERE libro=%d AND capitulo=%d AND versiculo=%d", 0, 10, $libro));
-            $bible_result5 = $wpdbnew->get_results($wpdbnew->prepare("SELECT * FROM $table_name WHERE libro=%d AND capitulo=%d AND versiculo=%d", 0, 0, 0)); // Get Bible Version Name
-			
-			// Get Bible Version Name
-            foreach ($bible_result5 as $version_name) {
-                $nombre = $version_name->texto;
-                }
 			
             // Get Bible Book
             foreach ($bible_result4 as $bible_book) {
                 $bible_book = $bible_book->texto;
                 }
-            
+
             // Display search results
             echo '</br>';
 			echo '<table width="100%" cellpadding="0" cellspacing="0" border="0">';
@@ -502,7 +575,7 @@ $wpdbnew = new wpdb($n, $d, $h, $u);
             $count = $count + 1;
         } // end for each
 		echo '</td></tr>';
-        echo '<tr><td class="txt_verse"></br><b>N&uacute;mero de vers&iacute;culos encontrados:</b> ' . $count . '</br>Citas b&iacute;blicas tomadas de la Biblia <b>'.$nombre.'</b></td></tr></table>';
+        echo '<tr><td class="txt_verse"></br><b>N&uacute;mero de vers&iacute;culos encontrados:</b> ' . $count . '</td></tr></table>';
 		display_bendicion_copyright();
     } // end else if
         

@@ -3,7 +3,7 @@ Contributors: bendicion.net
 Donate link: http://bendicion.net/
 Tags: biblia, bible
 Requires at least: 3.0.1
-Stable tag: 5.0
+Stable tag: 5.4
 Tested up to: 3.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -56,6 +56,9 @@ al usuario buscar en la Biblia por medio de libro, capitulo, versiculo y tambien
 
 = 5.0 =
 * Agregamos la opcion para ver capitulos en Paralelo.
+
+= 5.4 =
+* Ahora incluye la version RVG (Reina Valera Gomez), LBLA (La Biblia de las Americas), version en Portugues, version en Italiano. Opcion para navegar por libros (libro siguiente, libro anterior). Opcion para cambiar de version al leer un capitulo y tambien en la busqueda por palabras.
 
 == Upgrade Notice == 
 No changes yet
