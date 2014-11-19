@@ -2,7 +2,7 @@
     
     /*
     Plugin Name: Biblia y Concordancia
-    Version: 5.5.3
+    Version: 5.6
     Plugin URI: http://bendicion.net/biblia-para-wordpress/
     Author: Bendicion.net - Arlo B. Calles - arlo@bendicion.net
     Author URI: http://bendicion.net

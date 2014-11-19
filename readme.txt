@@ -4,7 +4,7 @@ Contributors: bendicion.net
 Donate link: http://bendicion.net/
 Tags: biblia, bible
 Requires at least: 3.0.1
-Stable tag: 5.5.3
+Stable tag: 5.6
 Tested up to: 4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -40,7 +40,7 @@ No screenshots yet
 
 = 5.5 =
 * Ahora tambien incluye la version en audio de la Reina Valera 1960 tomado de http://server.firefighters.org/bible_sp2.asp
-* El plugin ahora tambien es mas rapido.
+* El plugin ahora tambien es mas rapido
 
 = 5.4 =
 * Ahora incluye las versiones:
