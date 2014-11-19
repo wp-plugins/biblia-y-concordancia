@@ -2,7 +2,7 @@
     
     /*
     Plugin Name: Biblia y Concordancia
-    Version: 5.5.2
+    Version: 5.5.3
     Plugin URI: http://bendicion.net/biblia-para-wordpress/
     Author: Bendicion.net - Arlo B. Calles - arlo@bendicion.net
     Author URI: http://bendicion.net
@@ -77,7 +77,7 @@
         //wp_enqueue_script('load_jquery', ABSPATH . '/wp-content/plugins/biblia-y-concordancia/build/jquery.js');
         //wp_enqueue_script('load_mediaelement', ABSPATH . '/wp-content/plugins/biblia-y-concordancia/build/mediaelement-and-player.min.js');
         //echo '<link rel="stylesheet" href="' . ABSPATH . '/wp-content/plugins/biblia-y-concordancia/build/mediaelementplayer.min.css" type="text/css" />';
-        echo '<audio id="player2" src="http://bendicion.net/biblia_audio/'.$version.'/'.$libro.'/'.$libro.'_'.$capitulo.'.mp3" type="audio/mp3" controls="controls"></audio>';
+        echo '<audio id="player2" preload="none" src="http://bendicion.net/biblia_audio/'.$version.'/'.$libro.'/'.$libro.'_'.$capitulo.'.mp3" type="audio/mp3" controls="controls"></audio>';
         //wp_enqueue_script('load_audio', ABSPATH . '/wp-content/plugins/biblia-y-concordancia/audio.js');
         echo '</br></td></tr></table>';
       } // end function bendicion_audio_player
