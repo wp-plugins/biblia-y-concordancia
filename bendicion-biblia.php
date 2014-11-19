@@ -2,7 +2,7 @@
     
     /*
     Plugin Name: Biblia y Concordancia
-    Version: 5.5.1
+    Version: 5.5.2
     Plugin URI: http://bendicion.net/biblia-para-wordpress/
     Author: Bendicion.net - Arlo B. Calles - arlo@bendicion.net
     Author URI: http://bendicion.net
@@ -74,11 +74,11 @@
         echo '</br><table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr><td align="left" class="txt_verse">
         Escuchar todo el cap&iacute;tulo ' . $capitulo . ' del libro ' . $bible_book . '&nbsp;&nbsp;';
-        wp_enqueue_script('load_jquery', ABSPATH . '/wp-content/plugins/biblia-y-concordancia/build/jquery.js');
-        wp_enqueue_script('load_mediaelement', ABSPATH . '/wp-content/plugins/biblia-y-concordancia/build/mediaelement-and-player.min.js');
-        echo '<link rel="stylesheet" href="' . ABSPATH . '/wp-content/plugins/biblia-y-concordancia/build/mediaelementplayer.min.css" type="text/css" />
-        <audio id="player2" src="http://bendicion.net/biblia_audio/'.$version.'/'.$libro.'/'.$libro.'_'.$capitulo.'.mp3" type="audio/mp3" controls="controls"></audio>';
-        wp_enqueue_script('load_audio', ABSPATH . '/wp-content/plugins/biblia-y-concordancia/audio.js');
+        //wp_enqueue_script('load_jquery', ABSPATH . '/wp-content/plugins/biblia-y-concordancia/build/jquery.js');
+        //wp_enqueue_script('load_mediaelement', ABSPATH . '/wp-content/plugins/biblia-y-concordancia/build/mediaelement-and-player.min.js');
+        //echo '<link rel="stylesheet" href="' . ABSPATH . '/wp-content/plugins/biblia-y-concordancia/build/mediaelementplayer.min.css" type="text/css" />';
+        echo '<audio id="player2" src="http://bendicion.net/biblia_audio/'.$version.'/'.$libro.'/'.$libro.'_'.$capitulo.'.mp3" type="audio/mp3" controls="controls"></audio>';
+        //wp_enqueue_script('load_audio', ABSPATH . '/wp-content/plugins/biblia-y-concordancia/audio.js');
         echo '</br></td></tr></table>';
       } // end function bendicion_audio_player
     
