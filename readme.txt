@@ -4,7 +4,7 @@ Contributors: bendicion.net
 Donate link: http://bendicion.net/
 Tags: biblia, bible
 Requires at least: 3.0.1
-Stable tag: 5.5
+Stable tag: 5.5.1
 Tested up to: 4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -27,6 +27,14 @@ En Bendicion.net desarrollamos este plugin de WordPress con varias versiones de 
 
 = Si tengo una pregunta tecnica de la instalacion  =
    Puede contactarnos a info@bendicion.net
+
+== Upgrade Notice == 
+No changes yet
+
+== Screenshots ==
+No screenshots yet
+
+== Changelog ==
 
 = Cambios y actualizaciones del plugin =
 
@@ -70,12 +78,3 @@ En Bendicion.net desarrollamos este plugin de WordPress con varias versiones de 
 
 = 1.0 =
 * Busqueda por palabra, verso y capitulo.
-
-== Upgrade Notice == 
-No changes yet
-
-== Screenshots ==
-No screenshots yet
-
-== Changelog ==
-Log
