@@ -32,7 +32,12 @@ En Bendicion.net desarrollamos este plugin de WordPress con varias versiones de 
 No changes yet
 
 == Screenshots ==
-No screenshots yet
+
+1. Biblia y Concordancia
+2. Busqueda de un solo versiculo
+3. Busqueda de un solo capitulo
+4. Vista en paralelo can versiones diferentes
+5. Resultados de busqueda de la Concordancia
 
 == Changelog ==
 
