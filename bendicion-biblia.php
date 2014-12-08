@@ -133,6 +133,35 @@
 	margin-bottom: 0.4em;
 	margin-left: 0;
 	}
+        h2 {
+	
+        font-family: Georgia, "Times New Roman", Times, serif;
+	
+        font-weight: normal;
+	
+        color:#111111;
+	margin:0;	
+	
+        font-size: 24px;
+	
+        line-height: 100%;
+	
+        text-shadow: 0 1px 1px rgba(0,0,0,.2);
+	
+        margin-right: 0;
+	
+        margin-bottom: 0.4em;
+	
+        margin-left: 0;
+	}
+	    
+        h3 { FONT-WEIGHT: bold; 
+        FONT-SIZE: 17px; 
+        line-height: 160%; 
+        COLOR: #333333; 
+        FONT-FAMILY: "Times New Roman", Arial, Helvetica, sans-serif; 
+        TEXT-DECORATION: none; 
+        text-align: left; }
         </style>
         <table width="100%" cellpadding="0" cellspacing="0" border="0">';
         echo "<form id=\"\" class=\"bendicion-bible\" action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\" method=\"post\">\n";
