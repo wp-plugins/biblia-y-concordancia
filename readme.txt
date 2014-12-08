@@ -4,7 +4,7 @@ Contributors: bendicion.net
 Donate link: http://bendicion.net/
 Tags: biblia, bible
 Requires at least: 3.0.1
-Stable tag: 5.7
+Stable tag: 5.8
 Tested up to: 4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -42,6 +42,9 @@ No changes yet
 == Changelog ==
 
 = Cambios y actualizaciones del plugin =
+
+= 5.8 =
+* Agregamos la version: Palabra de Dios para Todos (PDT)
 
 = 5.7 =
 * El plugin ahora tambien es mas rapido
