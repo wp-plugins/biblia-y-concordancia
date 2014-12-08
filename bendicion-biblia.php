@@ -2,7 +2,7 @@
     
     /*
     Plugin Name: Biblia y Concordancia
-    Version: 5.7
+    Version: 5.8
     Plugin URI: http://bendicion.net/biblia-para-wordpress/
     Author: Bendicion.net - Arlo B. Calles - arlo@bendicion.net
     Author URI: http://bendicion.net
@@ -93,6 +93,7 @@
         <option value="biblia_rvc">Reina Valera Contempor&aacute;nea</option>
         <option value="biblia_rvg">Reina Valera G&oacute;mez</option>
         <option value="biblia_lbla">La Biblia de las Am&eacute;ricas</option>
+        <option value="biblia_pdt">Palabra de Dios para Todos</option>
         <option value="biblia_kjv">King James Version</option>
         <option value="biblia_portugues">Portugu&ecirc;s</option>
         <option value="biblia_italiano">Italiano</option>';
