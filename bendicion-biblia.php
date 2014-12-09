@@ -2,7 +2,7 @@
     
     /*
     Plugin Name: Biblia y Concordancia
-    Version: 5.8
+    Version: 5.8.1.1
     Plugin URI: http://bendicion.net/biblia-para-wordpress/
     Author: Bendicion.net - Arlo B. Calles - arlo@bendicion.net
     Author URI: http://bendicion.net
@@ -93,7 +93,11 @@
         <option value="biblia_rvc">Reina Valera Contempor&aacute;nea</option>
         <option value="biblia_rvg">Reina Valera G&oacute;mez</option>
         <option value="biblia_lbla">La Biblia de las Am&eacute;ricas</option>
+<<<<<<< .mine
+		<option value="biblia_pdt">Palabra de Dios para Todos</option>
+=======
         <option value="biblia_pdt">Palabra de Dios para Todos</option>
+>>>>>>> .r1040846
         <option value="biblia_kjv">King James Version</option>
         <option value="biblia_portugues">Portugu&ecirc;s</option>
         <option value="biblia_italiano">Italiano</option>';
@@ -133,6 +137,21 @@
 	margin-bottom: 0.4em;
 	margin-left: 0;
 	}
+<<<<<<< .mine
+        h2 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	color:#111111;
+	margin:0;	
+	font-size: 24px;
+	line-height: 100%;
+	text-shadow: 0 1px 1px rgba(0,0,0,.2);
+	margin-right: 0;
+	margin-bottom: 0.4em;
+	margin-left: 0;
+	}
+	    h3 { FONT-WEIGHT: bold; FONT-SIZE: 17px; line-height: 160%; COLOR: #333333; FONT-FAMILY: "Times New Roman", Arial, Helvetica, sans-serif; TEXT-DECORATION: none; text-align: left; }	
+=======
         h2 {
 	
         font-family: Georgia, "Times New Roman", Times, serif;
@@ -162,6 +181,7 @@
         FONT-FAMILY: "Times New Roman", Arial, Helvetica, sans-serif; 
         TEXT-DECORATION: none; 
         text-align: left; }
+>>>>>>> .r1040846
         </style>
         <table width="100%" cellpadding="0" cellspacing="0" border="0">';
         echo "<form id=\"\" class=\"bendicion-bible\" action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\" method=\"post\">\n";
