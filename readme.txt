@@ -3,9 +3,9 @@
 Contributors: bendicion.net
 Donate link: http://bendicion.net/
 Tags: biblia, bible
-Requires at least: 3.0.1
+Requires at least: 4.0.1
 Stable tag: 5.8
-Tested up to: 4.0
+Tested up to: 4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ Este plugin permite buscar en varias versiones de la Biblia. Incluye Audio. Visi
 
 == Description ==
 En Bendicion.net desarrollamos este plugin de WordPress con varias versiones de la Biblia en espanol y audio, y permite al usuario buscar en la Biblia por medio de libro, capitulo, versiculo y tambien por palabras como una concordancia. Los capitulos tambien se pueden ver en forma paralela. Visita Bendicion.net
+Ver demo aqui: http://bibleplugin.com/biblia/
 
 == Installation ==
 1. Sube el plugin 'biblia y concordancia' al directorio `/wp-content/plugins/`.
@@ -70,7 +71,7 @@ No changes yet
 = 4.0 =
 * Agregamos mas versiones de la Biblia: 
 * Reina Valera 1960
-* Reina Valera 1909 version en Audio (tomado de Word Project wordproject.org)
+* Reina Valera 1909 version en Audio tomado de Word Project http://wordproject.org/bibles/audio/07_spanish/index.htm
 * Reina Valera Actualizada 1989
 * Reina Valera Contemporanea (RVC)
 * Sagradas Escrituras 1569
@@ -85,9 +86,6 @@ No changes yet
 
 = 2.5 =
 * Agregamos la version Reina Valera 1909 (dominio publico) en la opcion de busqueda por palabras.
-
-= 1.0.2 =
-* Se quito un directorio que no estaba presente y daba el error: failed to open stream: No such file or directory.
 
 = 1.0 =
 * Busqueda por palabra, verso y capitulo.
