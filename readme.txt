@@ -4,7 +4,7 @@ Contributors: bendicion.net
 Donate link: http://bendicion.net/
 Tags: biblia, bible
 Requires at least: 4.0.1
-Stable tag: 5.8
+Stable tag: 5.9
 Tested up to: 4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -15,6 +15,21 @@ Este plugin permite buscar en varias versiones de la Biblia. Incluye Audio. Visi
 En Bendicion.net desarrollamos este plugin de WordPress con varias versiones de la Biblia en espanol y audio, y permite al usuario buscar en la Biblia por medio de libro, capitulo, versiculo y tambien por palabras como una concordancia. Los capitulos tambien se pueden ver en forma paralela. Visita Bendicion.net
 
 = Ver demo aqui: =  http://bibleplugin.com/biblia/
+
+= Versiones disponibles en el plugin =
+
+* Reina Valera 1960 (RVR 1960)
+* Reina Valera 1909 (RVR 1909)
+* Reina Valera Actualizada (RVA 1989)
+* Sagradas Escrituras 1569
+* Nueva Traducción Viviente (NTV 2009)
+* Reina Valera Contemporánea (RVC 2011)
+* Reina Valera Gómez (RVG 2004)
+* La Biblia de las Américas (LBLA 1997)
+* Palabra de Dios para Todos (PDT 2005)
+* La Nueva Biblia de los Hispanos (NBLH 2005)
+* Dios Habla Hoy Edición Latinoamericana (DHHL 1996)
+* King James Version (KJV)
 
 == Installation ==
 1. Sube el plugin 'biblia y concordancia' al directorio `/wp-content/plugins/`.
@@ -40,10 +55,29 @@ No changes yet
 3. Busqueda de un solo capitulo
 4. Vista en paralelo can versiones diferentes
 5. Resultados de busqueda de la Concordancia
+6. Vista en paralelo con tres versiones
 
 == Changelog ==
 
 = Cambios y actualizaciones del plugin =
+
+= Por hacer... = 
+
+* **Compatibilidad:** Hacer el plugin compatible con WordPress Multisite.
+
+= 7.0 (28-30 Diciembre 2014) =
+
+* **Nueva version:** El plugin ahora incluye la version "Dios Habla Hoy Edición Latinoamericana" (DHHL 1996).
+* **Nueva version:** El plugin ahora incluye la version "La Nueva Biblia de los Hispanos" (NBLH 2005).
+* **Compatibilidad:** Compatible con la version de WordPress 4.1.
+* **Nueva funcion:** Cuando se selecciona un libro de la Biblia en el menu desplegable, aparece el numero de capitulos correspondiente automaticamente.
+* **Nueva funcion:** Se agrego el boton "Agregar Paralelo" para ver la Biblia en 3 versiones diferentes.
+* **Navegacion:** En la vista de paralelo se agrego un boton para 'Remover Paralelo'.
+* **Navegacion:** En la vista de paralelo se agregaron los botones 'libro anterios' y 'libro siguiente' para navegacion.
+* **Bug:** Se agrego "order by ... asc" para mostrar los versiculos y capitulos en el orden correcto ascendente.
+* **Bug:** Se agrego una funcion nueva para corregir cuando la palabra de busqueda en la concordancia no era subrayada (highlighted).
+* **Optimizacion:** Los numeros de los versiculos ahora son pequeños usando el codigo sup, por ejemplo <sup>3</sup>.
+* **Optimizacion:** Los versiculos cambian de color (highlighter) cuando el mouse se mueve sobre ellos.
 
 = 5.8 =
 * Agregamos la version: Palabra de Dios para Todos (PDT)
