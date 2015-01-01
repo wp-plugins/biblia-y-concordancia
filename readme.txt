@@ -66,9 +66,9 @@ No changes yet
 
 * **Compatibilidad:** Hacer el plugin compatible con WordPress Multisite.
 
-= 7.0 (28-30 Diciembre 2014) =
+= 5.9 (28-30 Diciembre 2014) =
 
-* **Nueva version:** El plugin ahora incluye la version "Dios Habla Hoy Edición Latinoamericana" (DHHL 1996).
+* **Nueva version:** El plugin ahora incluye la version "Dios Habla Hoy Edicion Latinoamericana" (DHHL 1996).
 * **Nueva version:** El plugin ahora incluye la version "La Nueva Biblia de los Hispanos" (NBLH 2005).
 * **Compatibilidad:** Compatible con la version de WordPress 4.1.
 * **Nueva funcion:** Cuando se selecciona un libro de la Biblia en el menu desplegable, aparece el numero de capitulos correspondiente automaticamente.
@@ -77,7 +77,7 @@ No changes yet
 * **Navegacion:** En la vista de paralelo se agregaron los botones 'libro anterios' y 'libro siguiente' para navegacion.
 * **Bug:** Se agrego "order by ... asc" para mostrar los versiculos y capitulos en el orden correcto ascendente.
 * **Bug:** Se agrego una funcion nueva para corregir cuando la palabra de busqueda en la concordancia no era subrayada (highlighted).
-* **Optimizacion:** Los numeros de los versiculos ahora son pequeños usando el codigo sup, por ejemplo <sup>3</sup>.
+* **Optimizacion:** Los numeros de los versiculos ahora son pequenos usando el codigo sup, por ejemplo <sup>3</sup>.
 * **Optimizacion:** Los versiculos cambian de color (highlighter) cuando el mouse se mueve sobre ellos.
 
 = 5.8 =
