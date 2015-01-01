@@ -1,0 +1,92 @@
+        .txt_verse { 
+		   FONT-WEIGHT: normal; 
+		   FONT-SIZE: 17px; 
+		   line-height: 160%; 
+		   COLOR: #333333; 
+		   FONT-FAMILY: "Times New Roman", Arial, Helvetica, sans-serif; 
+		   TEXT-DECORATION: none; 
+		   text-align: left; 
+		}		
+		.book_name {
+		   font-family: Georgia, "Times New Roman", Times, serif;
+		   font-weight: normal;
+		   color:#111111;
+		   /* margin:0; */
+		   font-size: 28px;
+		   line-height: 100%;
+		   text-shadow: 0 1px 1px rgba(0,0,0,.2);
+		   /* margin-right: 0; */
+		   margin-bottom: 0.4em;
+		   margin-top: 10px;
+		   /* margin-left: 0; */
+		   text-transform: uppercase;
+		   text-align:center;
+		}
+		.book_desc {
+		   font-size: 20px;
+		}		
+		h2 {
+		   font-family: Georgia, "Times New Roman", Times, serif;
+		   font-weight: normal;
+		   color:#111111;
+		   margin:0;	
+		   font-size: 24px;
+		   line-height: 100%;
+		   text-shadow: 0 1px 1px rgba(0,0,0,.2);
+		   margin-right: 0;
+		   margin-bottom: 0.4em;
+		   margin-left: 0;
+		}
+	    h3 {
+		   FONT-WEIGHT: bold; 
+		   FONT-SIZE: 17px; 
+		   line-height: 160%; 
+		   COLOR: #333333; 
+		   FONT-FAMILY: "Times New Roman", Arial, Helvetica, sans-serif; 
+		   TEXT-DECORATION: none; 
+		   text-align: left; 
+		}
+		.txt_sup {
+		   FONT-WEIGHT: normal;
+		   FONT-SIZE: 12px;
+		   COLOR: #333333;
+		   FONT-FAMILY: "Times New Roman", Arial, Helvetica, sans-serif;
+		   TEXT-DECORATION: none;
+		   text-align: left;
+		}
+		.rojo {
+		   COLOR: #C40000;
+		}
+		.hovertable {
+           FONT-WEIGHT: normal;
+           FONT-SIZE: 19px;
+           line-height: 140%;
+           COLOR: #333333;
+           FONT-FAMILY: "Times New Roman", Arial, Helvetica, sans-serif;
+           TEXT-DECORATION: none;
+           text-align: left;
+		}
+		.hovertable tr {
+		   /* background: #FFF; */
+		}
+		.hovertable tr:hover {
+		   background-color:#d6f3ff;
+		}
+		.entry-content table, 
+		.comment-content table {
+			border-bottom: 0px;
+			padding: 0px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+		.entry-content td, 
+		.comment-content td {
+			border-top: 0px;
+			padding: 0px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+		.caps {
+			text-transform: uppercase;
+			font-size: 80%;
+		}
