@@ -22,13 +22,13 @@ En Bendicion.net desarrollamos este plugin de WordPress con varias versiones de 
 * Reina Valera 1909 (RVR 1909)
 * Reina Valera Actualizada (RVA 1989)
 * Sagradas Escrituras 1569
-* Nueva Traducción Viviente (NTV 2009)
-* Reina Valera Contemporánea (RVC 2011)
-* Reina Valera Gómez (RVG 2004)
-* La Biblia de las Américas (LBLA 1997)
+* Nueva Traduccion Viviente (NTV 2009)
+* Reina Valera Contemporanea (RVC 2011)
+* Reina Valera Gomez (RVG 2004)
+* La Biblia de las Americas (LBLA 1997)
 * Palabra de Dios para Todos (PDT 2005)
 * La Nueva Biblia de los Hispanos (NBLH 2005)
-* Dios Habla Hoy Edición Latinoamericana (DHHL 1996)
+* Dios Habla Hoy Edicion Latinoamericana (DHHL 1996)
 * King James Version (KJV)
 
 == Installation ==
@@ -60,6 +60,7 @@ No changes yet
 == Changelog ==
 
 = Cambios y actualizaciones del plugin =
+
 
 = Por hacer... = 
 
