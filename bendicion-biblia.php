@@ -63,19 +63,24 @@
     ### Function: Biblia Versiones
     function biblia_versiones()
       {
-        echo '<option value="biblia_1960">Reina Valera 1960</option>
-        <option value="biblia_1909">Reina Valera 1909</option>
-        <option value="biblia_1989">Reina Valera Actualizada 1989</option>
-        <option value="biblia_1569">Sagradas Escrituras 1569</option>
-        <option value="biblia_ntv">Nueva Traducci&oacute;n Viviente 2009</option>
-        <option value="biblia_rvc">Reina Valera Contempor&aacute;nea 2011</option>
-        <option value="biblia_rvg">Reina Valera G&oacute;mez 2004</option>
-        <option value="biblia_lbla">La Biblia de las Am&eacute;ricas 1997</option>
-		<option value="biblia_pdt">Palabra de Dios para Todos 2005</option>
-		<option value="biblia_nblh">La Nueva Biblia de los Hispanos 2005</option>
-		<option value="biblia_dhhl">Dios Habla Hoy Edici&oacute;n Latinoamericana 1996</option>
-		<option value="biblia_vin">Biblia Versi&oacute;n Israelita Nazarena 2007</option>
-        <option value="biblia_kjv">King James Version</option>';
+       echo '<option value="biblia_1960">Reina Valera 1960 (RVR 1960)</option>
+       <option value="biblia_1909">Reina Valera 1909 (RVR 1909)</option>
+	   <option value="biblia_1989">Reina Valera Actualizada (RVA 1989)</option>
+	   <option value="biblia_1977">Reina Valera (RV 1977)</option>
+	   <option value="biblia_2000">Reina Valera (RV 2000)</option>
+	   <option value="biblia_rvc">Reina Valera Contempor&aacute;nea (RVC 2011)</option>
+	   <option value="biblia_rvg">Reina Valera G&oacute;mez (RVG 2004)</option>
+	   <option value="biblia_1569">Sagradas Escrituras 1569</option>
+	   <option value="biblia_ntv">Nueva Traducci&oacute;n Viviente (NTV 2009)</option>
+	   <option value="biblia_nvi">Nueva Versi&oacute;n Internacional (NVI 1999)</option>
+	   <option value="biblia_lbla">La Biblia de las Am&eacute;ricas (LBLA 1997)</option>
+	   <option value="biblia_pdt">Palabra de Dios para Todos (PDT 2005)</option>
+	   <option value="biblia_nblh">La Nueva Biblia de los Hispanos (NBLH 2005)</option>
+	   <option value="biblia_dhhl">Dios Habla Hoy Edici&oacute;n Latinoamericana (DHHL 1996)</option>
+	   <option value="biblia_vin">Biblia Versi&oacute;n Israelita Nazarena (VIN 2007)</option>
+	   <option value="biblia_bls">Biblia en Lenguaje Sencillo (BLS 2008)</option>
+	   <option value="biblia_vm">Biblia Versi&oacute;n Moderna de H.B. Pratt (VM 1929)</option>
+	   <option value="biblia_kjv">King James Version (KJV)</option>';
       }
     
     function display_bendicion_copyright()
