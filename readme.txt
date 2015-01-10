@@ -21,14 +21,20 @@ En Bendicion.net desarrollamos este plugin de WordPress con varias versiones de 
 * Reina Valera 1960 (RVR 1960)
 * Reina Valera 1909 (RVR 1909)
 * Reina Valera Actualizada (RVA 1989)
-* Sagradas Escrituras 1569
-* Nueva Traduccion Viviente (NTV 2009)
+* Reina Valera (RV 1977)
+* Reina Valera (RV 2000)
 * Reina Valera Contemporanea (RVC 2011)
 * Reina Valera Gomez (RVG 2004)
+* Sagradas Escrituras 1569
+* Nueva Traduccion Viviente (NTV 2009)
+* Nueva Version Internacional (NVI 1999)
 * La Biblia de las Americas (LBLA 1997)
-* Palabra de Dios para Todos (PDT 2005)
+* Palabra de Dios para Todos (PDT 2008)
 * La Nueva Biblia de los Hispanos (NBLH 2005)
 * Dios Habla Hoy Edicion Latinoamericana (DHHL 1996)
+* Biblia Version Israelita Nazarena (VIN 2007)
+* Biblia en Lenguaje Sencillo (BLS 2008)
+* Biblia Version Moderna de H.B. Pratt (VM 1929)
 * King James Version (KJV)
 
 == Installation ==
@@ -63,11 +69,18 @@ No changes yet
 
 
 = Por hacer... = 
+* Hacer el plugin compatible con WordPress Multisite.
+* Usar diferentes lenguajes para el plugin con archivos po.
 
-* **Compatibilidad:** Hacer el plugin compatible con WordPress Multisite.
+= 6.0 (1-9 Enero 2015) =
+* **Nueva version:** El plugin ahora incluye la "Biblia Version Israelita Nazarena" (VIN 2007).
+* **Nueva version:** El plugin ahora incluye la "Nueva Version Internacional" (NVI 1999).
+* **Nueva version:** El plugin ahora incluye la "Reina Valera" (RV 1977).
+* **Nueva version:** El plugin ahora incluye la "Reina Valera" (RV 2000).
+* **Nueva version:** El plugin ahora incluye la "Biblia en Lenguaje Sencillo" (BLS 2008).
+* **Nueva version:** El plugin ahora incluye la "Biblia Version Moderna de H.B. Pratt" (VM 1929).
 
 = 5.9 (28-30 Diciembre 2014) =
-
 * **Nueva version:** El plugin ahora incluye la version "Dios Habla Hoy Edicion Latinoamericana" (DHHL 1996).
 * **Nueva version:** El plugin ahora incluye la version "La Nueva Biblia de los Hispanos" (NBLH 2005).
 * **Compatibilidad:** Compatible con la version de WordPress 4.1.

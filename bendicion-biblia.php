@@ -1,7 +1,7 @@
 <?php
     /*
     Plugin Name: Biblia y Concordancia con Audio
-    Version: 5.9
+    Version: 6.0
     Plugin URI: http://bibleplugin.com/
     Author: Bendicion.net - BiblePlugin.com - Arlo B. Calles - arlo@bendicion.net
     Author URI: http://bendicion.net
@@ -74,6 +74,7 @@
 		<option value="biblia_pdt">Palabra de Dios para Todos 2005</option>
 		<option value="biblia_nblh">La Nueva Biblia de los Hispanos 2005</option>
 		<option value="biblia_dhhl">Dios Habla Hoy Edici&oacute;n Latinoamericana 1996</option>
+		<option value="biblia_vin">Biblia Versi&oacute;n Israelita Nazarena 2007</option>
         <option value="biblia_kjv">King James Version</option>';
       }
     
@@ -518,7 +519,7 @@
 			// Input button to Remove Paralel view
 		    echo "<tr><td><form class=\"bendicion-bible\" action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\" method=\"post\">";
 		    echo '<input type="hidden" name="libro" value="'.$libro.'" />';
-		    echo '<input type="hidden" name="capitulo" value="1" />';
+		    echo '<input type="hidden" name="capitulo" value="'.$capitulo.'" />';
 		    echo '<input type="hidden" name="version" value="'.$left_table_name.'">';
 		    echo '<input type="submit" value="Remover Paralelo" /></form></td>';
 			
