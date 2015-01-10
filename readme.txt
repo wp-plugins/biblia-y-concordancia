@@ -4,7 +4,7 @@ Contributors: bendicion.net
 Donate link: http://bendicion.net/
 Tags: biblia, bible
 Requires at least: 4.0.1
-Stable tag: 5.9
+Stable tag: 6.1
 Tested up to: 4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -29,12 +29,13 @@ En Bendicion.net desarrollamos este plugin de WordPress con varias versiones de 
 * Nueva Traduccion Viviente (NTV 2009)
 * Nueva Version Internacional (NVI 1999)
 * La Biblia de las Americas (LBLA 1997)
-* Palabra de Dios para Todos (PDT 2008)
 * La Nueva Biblia de los Hispanos (NBLH 2005)
+* Palabra de Dios para Todos (PDT 2008)
 * Dios Habla Hoy Edicion Latinoamericana (DHHL 1996)
 * Biblia Version Israelita Nazarena (VIN 2007)
 * Biblia en Lenguaje Sencillo (BLS 2008)
 * Biblia Version Moderna de H.B. Pratt (VM 1929)
+* Biblia La Palabra Version Hispanoamericana (BLPH 2011)
 * King James Version (KJV)
 
 == Installation ==
@@ -72,7 +73,10 @@ No changes yet
 * Hacer el plugin compatible con WordPress Multisite.
 * Usar diferentes lenguajes para el plugin con archivos po.
 
-= 6.0 (1-9 Enero 2015) =
+= 6.1 =
+* **Nueva version:** El plugin ahora incluye la "Biblia La Palabra Version Hispanoamericana" (BLPH 2011) - Enero 10, 2015.
+
+= 6.0 (Enero 1-9, 2015) =
 * **Nueva version:** El plugin ahora incluye la "Biblia Version Israelita Nazarena" (VIN 2007).
 * **Nueva version:** El plugin ahora incluye la "Nueva Version Internacional" (NVI 1999).
 * **Nueva version:** El plugin ahora incluye la "Reina Valera" (RV 1977).
@@ -80,7 +84,7 @@ No changes yet
 * **Nueva version:** El plugin ahora incluye la "Biblia en Lenguaje Sencillo" (BLS 2008).
 * **Nueva version:** El plugin ahora incluye la "Biblia Version Moderna de H.B. Pratt" (VM 1929).
 
-= 5.9 (28-30 Diciembre 2014) =
+= 5.9 (Diciembre 28-30, 2014) =
 * **Nueva version:** El plugin ahora incluye la version "Dios Habla Hoy Edicion Latinoamericana" (DHHL 1996).
 * **Nueva version:** El plugin ahora incluye la version "La Nueva Biblia de los Hispanos" (NBLH 2005).
 * **Compatibilidad:** Compatible con la version de WordPress 4.1.
