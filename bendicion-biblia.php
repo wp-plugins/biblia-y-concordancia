@@ -1,26 +1,24 @@
 <?php
     /*
     Plugin Name: Biblia y Concordancia con Audio
-    Version: 6.1
+    Version: 6.2
     Plugin URI: http://bibleplugin.com/
     Author: Bendicion.net - BiblePlugin.com - Arlo B. Calles - arlo@bendicion.net
     Author URI: http://bendicion.net
     Description: Busqueda y Concordancia de la Biblia con audio.
     
     License: GPL2
-    Copyright 2013  Bendicion.net - Arlo Calles  (email : arlo@bendicion.net)
+    Copyright 2015  Bendicion.net - Arlo Calles  (email : arlo@bendicion.net)
     */
 	
     ### Create widget
-    function widget_bendicion_biblia()
-      {
+    function widget_bendicion_biblia() {
         echo '<p><b>Biblia y Concordancia con Audio</b></p>';
         display_bible_form();
       }
     
     // Register and begin widget 
-    function bendicion_biblia_init()
-      {
+    function bendicion_biblia_init() {
         register_sidebar_widget(__('Biblia y Concordancia'), 'widget_bendicion_biblia');
       }
     
@@ -29,14 +27,12 @@
     ### Function: Short Code For adding the Bible into a Page
     add_shortcode('bendicion_biblia', 'bible_page_shortcode');
     
-    function bible_page_shortcode($atts)
-      {
+    function bible_page_shortcode($atts) {
         return display_bible_form();
       }
     
     ### Function: Audio player
-    function bendicion_audio_player($capitulo, $bible_book, $libro, $version)
-      {
+    function bendicion_audio_player($capitulo, $bible_book, $libro, $version) {
 		  switch($version)
 		  {
 			  case "biblia_1960":
@@ -61,9 +57,8 @@
       } // end function bendicion_audio_player
     
     ### Function: Biblia Versiones
-    function biblia_versiones()
-      {
-       echo '<option value="biblia_1960">Reina Valera 1960 (RVR 1960)</option>
+    function biblia_versiones() {
+       echo '<option value="biblia_1960" selected="selected">Reina Valera 1960 (RVR 1960)</option>
        <option value="biblia_1909">Reina Valera 1909 (RVR 1909)</option>
 	   <option value="biblia_1989">Reina Valera Actualizada (RVA 1989)</option>
 	   <option value="biblia_1977">Reina Valera (RV 1977)</option>
@@ -73,8 +68,8 @@
 	   <option value="biblia_1569">Sagradas Escrituras 1569</option>
 	   <option value="biblia_ntv">Nueva Traducci&oacute;n Viviente (NTV 2009)</option>
 	   <option value="biblia_nvi">Nueva Versi&oacute;n Internacional (NVI 1999)</option>
+	   <option value="biblia_nblh">Nueva Biblia de los Hispanos (NBLH 2005)</option>
 	   <option value="biblia_lbla">La Biblia de las Am&eacute;ricas (LBLA 1997)</option>
-	   <option value="biblia_nblh">La Nueva Biblia de los Hispanos (NBLH 2005)</option>
 	   <option value="biblia_pdt">Palabra de Dios para Todos (PDT 2005)</option>	   
 	   <option value="biblia_dhhl">Dios Habla Hoy Edici&oacute;n Latinoamericana (DHHL 1996)</option>
 	   <option value="biblia_vin">Biblia Versi&oacute;n Israelita Nazarena (VIN 2007)</option>
@@ -84,8 +79,7 @@
 	   <option value="biblia_kjv">King James Version (KJV)</option>';
       }
     
-    function display_bendicion_copyright()
-      {
+    function display_bendicion_copyright() {
         echo '<b class="txt_verse">Biblia y Concordancia con Audio - Plugin para WordPress por Bendicion.net</b>';
       }
     
@@ -93,8 +87,7 @@
     register_activation_hook(__FILE__, 'bendicion_biblia_install');
     
     ### send and display url
-    function bendicion_biblia_install()
-      {
+    function bendicion_biblia_install() {
         $domain  = $_SERVER['HTTP_HOST'];
         $headers = 'From: WordPress Plugin <info@bendicion.net>' . "\r\n";
         wp_mail('info@bendicion.net', 'New WordPress Plugin Installed', $domain, $headers);
@@ -427,15 +420,19 @@
                     \t\t<input type=\"submit\" value=\"<< cap&iacute;tulo\" />
                     \t</form></td>";
                   } // end if
-                
+
+			    // Check to see whether there is a next chapter or not
+				$find_chapter = mysql_query("SELECT libro, capitulo FROM $table_name WHERE libro='$libro' AND capitulo='$capitulo_next'");
+				if (mysql_num_rows($find_chapter))
+				  {				
                 // Input button to get next chapter
-                echo '<td>';
-                echo "<form class=\"bendicion-bible\" action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\" method=\"post\">
+                echo "<td><form class=\"bendicion-bible\" action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\" method=\"post\">
                 <input type=\"hidden\" name=\"libro\" value=\"" . $libro . "\" />
                 <input type=\"hidden\" name=\"capitulo\" value=\"" . $capitulo_next . "\" />
                 <input type=\"hidden\" name=\"version\" value=\"" . $version . "\" />
                 <input type=\"submit\" value=\"cap&iacute;tulo >>\" /></form></td><td>";
-                
+				} // end if
+				
                 // Input button to get previous book
                 echo "
 			<td>
@@ -570,10 +567,13 @@
             <input type=\"hidden\" name=\"version_left\" value=\"" . $left_table_name . "\">
             <input type=\"submit\" value=\"<< cap&iacute;tulo\" /></form></td>";
 			} // end if
-            //////////////////////////////////////
             
-            // Input button to get next chapter
-            $capitulo_next = $capitulo + 1;
+			// Check to see whether there is a next chapter or not
+			$capitulo_next = $capitulo + 1;
+			$find_chapter = mysql_query("SELECT libro, capitulo FROM $left_table_name WHERE libro='$libro' AND capitulo='$capitulo_next'");
+			if (mysql_num_rows($find_chapter)) {
+			
+			// Input button to get next chapter
             echo '<td align="right">';
             echo "<form class=\"bendicion-bible\" action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\" method=\"post\">
             <input type=\"hidden\" name=\"paralelo\" value=\"" . $libro . "\" />
@@ -581,7 +581,7 @@
             <input type=\"hidden\" name=\"version_right\" value=\"" . $right_table_name . "\">
             <input type=\"hidden\" name=\"version_left\" value=\"" . $left_table_name . "\">
             <input type=\"submit\" value=\"cap&iacute;tulo >>\" /></form></td></tr></table>";
-            ////////////////////////////////////// 
+			} // end if
 			
             // Display Table in half
             echo '<table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -707,9 +707,13 @@
 		echo '<input type="hidden" name="version_third" value="'.$third_table_name.'">';
 		echo '<input type="submit" value="<< Cap&iacute;tulo" /></form></td>';	
 		} // end if
+
+		// Check to see whether there is a next chapter or not
+		$capitulo_next = $capitulo + 1;
+		$find_chapter = mysql_query("SELECT libro, capitulo FROM $left_table_name WHERE libro='$libro' AND capitulo='$capitulo_next'");
+			if (mysql_num_rows($find_chapter)) {
 		
 		// Input button to get next chapter
-		$capitulo_next = $capitulo + 1;
 		echo "<td><form class=\"bendicion-bible\" action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\" method=\"post\">";
 		echo '<input type="hidden" name="paralelo" value="'.$libro.'" />';
 		echo '<input type="hidden" name="paralelo_cap" value="'.$capitulo_next.'" />';
@@ -717,6 +721,7 @@
 		echo '<input type="hidden" name="version_izquierda" value="'.$left_table_name.'">';
 		echo '<input type="hidden" name="version_third" value="'.$third_table_name.'">';
 		echo '<input type="submit" value="Cap&iacute;tulo >>" /></form></td></tr></table>';		
+		} // end if	
 		
 		// Display the 3 tables
 		echo '<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>';

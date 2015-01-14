@@ -4,7 +4,7 @@ Contributors: bendicion.net
 Donate link: http://bendicion.net/
 Tags: biblia, bible
 Requires at least: 4.0.1
-Stable tag: 6.1
+Stable tag: 6.2
 Tested up to: 4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -28,8 +28,8 @@ En Bendicion.net desarrollamos este plugin de WordPress con varias versiones de 
 * Sagradas Escrituras 1569
 * Nueva Traduccion Viviente (NTV 2009)
 * Nueva Version Internacional (NVI 1999)
+* Nueva Biblia de los Hispanos (NBLH 2005)
 * La Biblia de las Americas (LBLA 1997)
-* La Nueva Biblia de los Hispanos (NBLH 2005)
 * Palabra de Dios para Todos (PDT 2008)
 * Dios Habla Hoy Edicion Latinoamericana (DHHL 1996)
 * Biblia Version Israelita Nazarena (VIN 2007)
@@ -66,12 +66,17 @@ No changes yet
 
 == Changelog ==
 
-= Cambios y actualizaciones del plugin =
+= Ver demo aqui: =  http://bibleplugin.com/biblia/
 
+= Cambios y actualizaciones del plugin =
 
 = Por hacer... = 
 * Hacer el plugin compatible con WordPress Multisite.
 * Usar diferentes lenguajes para el plugin con archivos po.
+
+= 6.2 (Enero 13, 2015) =
+* **Bug:** Se arreglo el boton del "capitulo siguiente >>" ya que no debe aparecer cuando el libro no tiene ese capitulo Ej.: Hebreos 14 no existe,
+por lo tanto el plugin no debe mostrar el boton de "proximo capitulo" en este caso.
 
 = 6.1 =
 * **Nueva version:** El plugin ahora incluye la "Biblia La Palabra Version Hispanoamericana" (BLPH 2011) - Enero 10, 2015.
