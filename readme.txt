@@ -4,7 +4,7 @@ Contributors: bendicion.net
 Donate link: http://bendicion.net/
 Tags: biblia, bible
 Requires at least: 4.0.1
-Stable tag: 6.2
+Stable tag: 6.3
 Tested up to: 4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -73,6 +73,9 @@ No changes yet
 = Por hacer... = 
 * Hacer el plugin compatible con WordPress Multisite.
 * Usar diferentes lenguajes para el plugin con archivos po.
+
+= 6.3 (Enero 14, 2015) =
+* **Nueva version:** El plugin ahora incluye la "Traduccion en Lenguaje Actual" (TLA 2002).
 
 = 6.2 (Enero 13, 2015) =
 * **Bug:** Se arreglo el boton del "capitulo siguiente >>" ya que no debe aparecer cuando el libro no tiene ese capitulo Ej.: Hebreos 14 no existe,
