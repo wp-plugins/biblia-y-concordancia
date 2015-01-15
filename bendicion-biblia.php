@@ -1,7 +1,7 @@
 <?php
     /*
     Plugin Name: Biblia y Concordancia con Audio
-    Version: 6.2
+    Version: 6.3
     Plugin URI: http://bibleplugin.com/
     Author: Bendicion.net - BiblePlugin.com - Arlo B. Calles - arlo@bendicion.net
     Author URI: http://bendicion.net
@@ -70,7 +70,8 @@
 	   <option value="biblia_nvi">Nueva Versi&oacute;n Internacional (NVI 1999)</option>
 	   <option value="biblia_nblh">Nueva Biblia de los Hispanos (NBLH 2005)</option>
 	   <option value="biblia_lbla">La Biblia de las Am&eacute;ricas (LBLA 1997)</option>
-	   <option value="biblia_pdt">Palabra de Dios para Todos (PDT 2005)</option>	   
+	   <option value="biblia_pdt">Palabra de Dios para Todos (PDT 2005)</option>
+	   <option value="biblia_tla">Traducci&oacute;n en Lenguaje Actual (TLA 2002)</option>	   
 	   <option value="biblia_dhhl">Dios Habla Hoy Edici&oacute;n Latinoamericana (DHHL 1996)</option>
 	   <option value="biblia_vin">Biblia Versi&oacute;n Israelita Nazarena (VIN 2007)</option>
 	   <option value="biblia_bls">Biblia en Lenguaje Sencillo (BLS 2008)</option>

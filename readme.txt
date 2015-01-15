@@ -31,6 +31,7 @@ En Bendicion.net desarrollamos este plugin de WordPress con varias versiones de 
 * Nueva Biblia de los Hispanos (NBLH 2005)
 * La Biblia de las Americas (LBLA 1997)
 * Palabra de Dios para Todos (PDT 2008)
+* Traduccion en Lenguaje Actual (TLA 2002)
 * Dios Habla Hoy Edicion Latinoamericana (DHHL 1996)
 * Biblia Version Israelita Nazarena (VIN 2007)
 * Biblia en Lenguaje Sencillo (BLS 2008)
