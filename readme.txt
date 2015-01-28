@@ -4,7 +4,7 @@ Contributors: bendicion.net
 Donate link: http://bendicion.net/
 Tags: biblia, bible
 Requires at least: 4.0.1
-Stable tag: 6.3
+Stable tag: 6.4
 Tested up to: 4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -74,6 +74,12 @@ No changes yet
 = Por hacer... = 
 * Hacer el plugin compatible con WordPress Multisite.
 * Usar diferentes lenguajes para el plugin con archivos po.
+
+= 6.4 (Enero 27, 2015) =
+* **Actualizacion:** El plugin ahora funciona por medio de un API de manera que todas las actualizaciones 
+ya no requieren hacer un "upgrade" del plugin a una nueva version. Todos los cambios son automaticos.
+* **Bug:** Se quito el boton de "<< libro anterior" ya que no debe aparecer cuando el libro es Genesis y se quito 
+el boton de "libro siguiente >>" cuando el libro es Apocalipsis.
 
 = 6.3 (Enero 14, 2015) =
 * **Nueva version:** El plugin ahora incluye la "Traduccion en Lenguaje Actual" (TLA 2002).
